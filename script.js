@@ -56,9 +56,7 @@ let isInViewport = function (elem) {
     let bounding = document.querySelector(".landing-container").getBoundingClientRect();
     return (
         bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.left >= 0 &&
-        bounding.bottom >= 0 &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        bounding.bottom >= 0
     );
 };
 
@@ -76,7 +74,7 @@ window.addEventListener('scroll', function (event) {
     mainNavText.style.transition = "all .3s ease-in-out";
   } else if (!isInViewport(landingPage)) {
     mainNav.style.transitionDelay = ".0s"
-    mainNav.style.height = "80px";
+    mainNav.style.height = "10vh";
     mainNavText.style.opacity = "1";
   }
 });
@@ -102,9 +100,9 @@ let LinkedIn = document.querySelector("#linkedIn");
 let Twitter = document.querySelector("#Twitter");
 window.addEventListener('scroll', function (event) {
   if (isInViewport2(HeadShot)) {
-    GitHub.style.transform = "translate(-75px, 0)";
-    Twitter.style.transform = "translate(70px, -50px)";
-    LinkedIn.style.transform = "translate(65px, 30px)";
+    GitHub.style.transform = "translate(-100px, 0)";
+    Twitter.style.transform = "translate(94px, -62.5px)";
+    LinkedIn.style.transform = "translate(90px, 35px)";
   } else if (!isInViewport2(HeadShot)) {
     GitHub.style.transform = "translate(0, 0)";
     Twitter.style.transform = "translate(0, 0)";
@@ -197,19 +195,19 @@ document.getElementById('lang-1').onclick = languageToggle1 = () => {
   // slider effect when changing to 1st Additional Skills title from 2nd title
   if (langTitle2Status === true && langTitle3Status === false) {
   findAdditionalContainer.style.opacity = "1";
-  findAdditionalContainer.style.transform = "translate(725px, 0)";
+  findAdditionalContainer.style.transform = "translate(100vw, 0)";
   findLanguageContainer.style.opacity = "0";
-  findLanguageContainer.style.transform = "translate(725px, 0)";
+  findLanguageContainer.style.transform = "translate(100vw, 0)";
   findStuffContainer.style.opacity = "0";
-  findStuffContainer.style.transform = "translate(725px, 0)";
+  findStuffContainer.style.transform = "translate(100vw, 0)";
   // slider effect when changing to 1st Additional Skills title from 3rd title
   } else if (langTitle2Status === false && langTitle3Status === true) {
   findAdditionalContainer.style.opacity = "1";
-  findAdditionalContainer.style.transform = "translate(725px, 0)";
+  findAdditionalContainer.style.transform = "translate(100vw, 0)";
   findLanguageContainer.style.opacity = "0";
-  findLanguageContainer.style.transform = "translate(725px, 0)";
+  findLanguageContainer.style.transform = "translate(100vw, 0)";
   findStuffContainer.style.opacity = "0";
-  findStuffContainer.style.transform = "translate(725px, 0)";
+  findStuffContainer.style.transform = "translate(100vw, 0)";
   }
 
   }
@@ -291,19 +289,19 @@ document.getElementById('lang-3').onclick = languageToggle3 = () => {
   // slider effect when changing to 3rd Stuff I'm learning title from 2nd title
   if (langTitle2Status === true && langTitle1Status === false) {
   findAdditionalContainer.style.opacity = "0";
-  findAdditionalContainer.style.transform = "translate(-725px, 0)";
+  findAdditionalContainer.style.transform = "translate(-100vw, 0)";
   findLanguageContainer.style.opacity = "0";
-  findLanguageContainer.style.transform = "translate(-725px, 0)";
+  findLanguageContainer.style.transform = "translate(-100vw, 0)";
   findStuffContainer.style.opacity = "1";
-  findStuffContainer.style.transform = "translate(-725px, 0)";
+  findStuffContainer.style.transform = "translate(-100vw, 0)";
   // slider effect when changing to 3rd Stuff I'm learning title from 1st title
   } else if (langTitle2Status === false && langTitle1Status === true) {
   findAdditionalContainer.style.opacity = "0";
-  findAdditionalContainer.style.transform = "translate(-725px, 0)";
+  findAdditionalContainer.style.transform = "translate(-100vw, 0)";
   findLanguageContainer.style.opacity = "0";
-  findLanguageContainer.style.transform = "translate(-725px, 0)";
+  findLanguageContainer.style.transform = "translate(-100vw, 0)";
   findStuffContainer.style.opacity = "1";
-  findStuffContainer.style.transform = "translate(-725px, 0)";
+  findStuffContainer.style.transform = "translate(-100vw, 0)";
   }
   if (langTitle1Status === true) {
   closeLanguageToggle1();
