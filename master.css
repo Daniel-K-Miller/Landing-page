@@ -2,9 +2,8 @@
 /* #1: #D7CDCC lightgrey */
 /* #2: #FFFFFF white */
 /* #3: #59656F black coral */
-/* #4: #9C528B razzmic berry*/
-/* #5: #1D1E2C dark gunmetal x*/
-/* #6: #3F88C5 Tufts blue */
+/* #4: #1D1E2C dark gunmetal x*/
+/* #5: #3F88C5 Tufts blue */
 
 /* universal + body */
 
@@ -157,6 +156,7 @@ body {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .main-nav ul a:hover {
   text-decoration: underline;
@@ -762,7 +762,9 @@ body {
   display: block;
   color: white;
   margin-bottom: 10px;
-  text-decoration: underline;
+}
+.footer-container a {
+  color: white;
 }
 .footer-container h2 {
   font-size: 1rem;

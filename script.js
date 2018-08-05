@@ -1,3 +1,4 @@
+
 /* Landing Page text fade in */
 
 let findLandingContainerLi = document.querySelectorAll(".landing-container li");
@@ -28,7 +29,16 @@ setTimeout(function(){
 document.getElementById("arrow-container").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
-let colorWrapperCenter = ((colorWrapperBounding.bottom - colorWrapperBounding.top) - window.scrollY) + 1;
+let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + 1;
+
+window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
+
+};
+// navbar intro link click to intro page
+document.getElementById("intro-link").onclick = scrollDown = () => {
+let colorWrapper = document.querySelector('.color-wrap-default');
+let colorWrapperBounding = colorWrapper.getBoundingClientRect();
+let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + 1;
 
 window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
 
@@ -52,7 +62,7 @@ let isInViewport = function (elem) {
     );
 };
 
-//navbar appearing/disappearing based off of if landingpage is in viewport
+//navbar appearing/disappearing based off of if landingpage is out of viewport
 
 let landingPage = document.querySelector(".landing-container");
 let mainNav = document.querySelector(".main-nav");
@@ -102,12 +112,21 @@ window.addEventListener('scroll', function (event) {
   }
 });
 
-//intro page arrow scroll Down
+// intro page arrow scroll Down to skills section
 
 document.getElementById("arrow-container2").onclick = scrollDown2 = () => {
 let dropdownWrapper = document.querySelector('.color-wrap-dropdown');
 let dropdownWrapperBounding = dropdownWrapper.getBoundingClientRect();
-let dropdownWrapperCenter = (dropdownWrapperBounding.bottom - dropdownWrapperBounding.top) + 1;
+let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) + 1);
+
+window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
+
+};
+// navbar skills link click to skills page
+document.getElementById("skills-link").onclick = scrollDown2 = () => {
+let dropdownWrapper = document.querySelector('.color-wrap-dropdown');
+let dropdownWrapperBounding = dropdownWrapper.getBoundingClientRect();
+let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) + 1);
 
 window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
 
@@ -521,3 +540,23 @@ let closeJavaScript = () => {
 };
 
 /* Drop down end */
+
+// arrow 3 to contact section
+
+document.getElementById("arrow-container3").onclick = scrollDown3 = () => {
+let footerWrapper = document.querySelector('.footer-container');
+let footerWrapperBounding = footerWrapper.getBoundingClientRect();
+let footerWrapperCenter = ((footerWrapperBounding.height * 3 - window.scrollY) + 1);
+
+window.scrollBy({top: footerWrapperCenter, left: 0, behavior: 'smooth'});
+
+};
+
+document.getElementById("contactMe-link").onclick = scrollDown3 = () => {
+let footerWrapper = document.querySelector('.footer-container');
+let footerWrapperBounding = footerWrapper.getBoundingClientRect();
+let footerWrapperCenter = ((footerWrapperBounding.height * 3 - window.scrollY) + 1);
+
+window.scrollBy({top: footerWrapperCenter, left: 0, behavior: 'smooth'});
+
+};
