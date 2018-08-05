@@ -60,6 +60,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
+  user-select: none;
 }
 #arrow-container:hover {
   position: relative;
@@ -298,6 +299,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   opacity: 1;
+  user-select: none;
 }
 #arrow-container2:hover {
   position: relative;
@@ -316,6 +318,7 @@ body {
   opacity: 1;
   position: relative;
   bottom: 2vh;
+  user-select: none;
 }
 #arrow-container3:hover {
   position: relative;
@@ -353,6 +356,7 @@ body {
   color: #59656f;
   transition: all .3s ease-in-out;
   cursor: pointer;
+  user-select: none;
 }
 #lang-2 {
   border-top: 2px solid white;
@@ -361,6 +365,7 @@ body {
   color: white;
   transition: all .3s ease-in-out;
   cursor: default;
+  user-select: none;
 }
 #lang-3 {
   border-top: 2px solid #59656f;
@@ -369,6 +374,7 @@ body {
   color: #59656f;
   transition: all .3s ease-in-out;
   cursor: pointer;
+  user-select: none;
 }
 
 /* Languages nav */
@@ -549,6 +555,7 @@ body {
   cursor: pointer;
   transition: all .4s ease-in-out;
   z-index: 100;
+  user-select: none;
 }
 #htmlButton {
   color: #59656f;
@@ -565,6 +572,7 @@ body {
   cursor: pointer;
   transition: all .4s ease-in-out;
   z-index: 100;
+  user-select: none;
 }
 #cssButton {
   color: #59656f;
@@ -581,6 +589,7 @@ body {
   cursor: pointer;
   transition: all .4s ease-in-out;
   z-index: 100;
+  user-select: none;
 }
 #javaScriptButton {
   color: #59656f;
