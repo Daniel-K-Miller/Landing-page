@@ -1,3 +1,10 @@
+let mobileDevice = false;
+
+if (window.screen.width <= 600) {
+  mobileDevice = true;
+} else {
+  mobileDevice = false;
+};
 
 /* Landing Page text fade in */
 
@@ -25,11 +32,11 @@ setTimeout(function(){
 }, 3976);
 /* scroll down introduction (arrow button press on landing page) */
 // works out centre point through variables of container
-
+console.log(window.screen.height);
 document.getElementById("arrow-container").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
-let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + 1;
+let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + (window.screen.height / 100 * .5) - 90;
 
 window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
 
@@ -56,7 +63,7 @@ let isInViewport = function (elem) {
     let bounding = document.querySelector(".landing-container").getBoundingClientRect();
     return (
         bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.bottom >= 0
+        bounding.bottom >= window.screen.height
     );
 };
 
@@ -94,23 +101,29 @@ let isInViewport2 = function (elem) {
 
 //social media appearing/disappearing based off of if headshot is in viewport
 
+
 let HeadShot = document.querySelector("#headshot");
+let HeadShotImg = document.querySelector("#headshot img");
 let Github = document.querySelector("#GitHub");
 let LinkedIn = document.querySelector("#linkedIn");
 let Twitter = document.querySelector("#Twitter");
 window.addEventListener('scroll', function (event) {
-  if (isInViewport2(HeadShot)) {
-    GitHub.style.transform = "translate(-100px, 0)";
-    Twitter.style.transform = "translate(94px, -62.5px)";
-    LinkedIn.style.transform = "translate(90px, 35px)";
-  } else if (!isInViewport2(HeadShot)) {
+  // checking if mobile media query is not met
+  if (isInViewport2(HeadShot) && mobileDevice === false) {
+    GitHub.style.transform = "translate(-90px, 0)";
+    Twitter.style.transform = "translate(80px, -62.5px)";
+    LinkedIn.style.transform = "translate(75px, 35px)";
+  // checking if mobile media query is met
+  } else if (isInViewport2(HeadShot) && mobileDevice === true) {
+    GitHub.style.transform = "translate(-175px, 0)";
+    Twitter.style.transform = "translate(130px, -110px)";
+    LinkedIn.style.transform = "translate(125px, 55px)";
+  }  else if (!isInViewport2(HeadShot)) {
     GitHub.style.transform = "translate(0, 0)";
     Twitter.style.transform = "translate(0, 0)";
     LinkedIn.style.transform = "translate(0, 0)";
   }
 });
-
-// intro page arrow scroll Down to skills section
 
 document.getElementById("arrow-container2").onclick = scrollDown2 = () => {
 let dropdownWrapper = document.querySelector('.color-wrap-dropdown');
@@ -169,10 +182,6 @@ window.addEventListener('scroll', function (event) {
     htmlAutoToggle = true;
   }
 });
-
-
-
-
 
 /* language bar buttons */
 
