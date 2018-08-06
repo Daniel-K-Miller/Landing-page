@@ -32,13 +32,17 @@ setTimeout(function(){
 }, 3976);
 /* scroll down introduction (arrow button press on landing page) */
 // works out centre point through variables of container
-console.log(window.screen.height);
+
 document.getElementById("arrow-container").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
-let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + (window.screen.height / 100 * .5) - 90;
-
-window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
+let colorWrapperCenter = ((colorWrapperBounding.height - window.scrollY) + 1);
+let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) + (window.screen.height / 100 * .5) - 90);
+  if (mobileDevice === false) {
+  window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
+  } else {
+  window.scrollBy({top: colorWrapperCenterMobile, left: 0, behavior: 'smooth'});
+  }
 
 };
 // navbar intro link click to intro page
@@ -46,9 +50,12 @@ document.getElementById("intro-link").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
 let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + 1;
-
-window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
-
+let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) + (window.screen.height / 100 * .5) - 90);
+  if (mobileDevice === false) {
+  window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
+  } else {
+    window.scrollBy({top: colorWrapperCenterMobile, left: 0, behavior: 'smooth'});
+  }
 };
 
 /* scroll back up to landing page on main-navbar logo click */
@@ -61,10 +68,17 @@ document.querySelector('.landing-container').scrollIntoView({behavior: 'smooth'}
 
 let isInViewport = function (elem) {
     let bounding = document.querySelector(".landing-container").getBoundingClientRect();
-    return (
+    if (mobileDevice === true) {
+      return (
         bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
         bounding.bottom >= window.screen.height
-    );
+    )
+  } else {
+      return (
+        bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.bottom >= 0
+    )
+  }
 };
 
 //navbar appearing/disappearing based off of if landingpage is out of viewport
@@ -85,7 +99,6 @@ window.addEventListener('scroll', function (event) {
     mainNavText.style.opacity = "1";
   }
 });
-
 
 // checking if headshot is in viewport to set up social media
 
@@ -128,7 +141,7 @@ window.addEventListener('scroll', function (event) {
 document.getElementById("arrow-container2").onclick = scrollDown2 = () => {
 let dropdownWrapper = document.querySelector('.color-wrap-dropdown');
 let dropdownWrapperBounding = dropdownWrapper.getBoundingClientRect();
-let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) + 1);
+let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) - 79);
 
 window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
 
@@ -137,10 +150,13 @@ window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
 document.getElementById("skills-link").onclick = scrollDown2 = () => {
 let dropdownWrapper = document.querySelector('.color-wrap-dropdown');
 let dropdownWrapperBounding = dropdownWrapper.getBoundingClientRect();
-let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) + 1);
-
-window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
-
+let dropdownWrapperCenter = ((dropdownWrapperBounding.height * 2 - window.scrollY) - 79);
+let dropdownWrapperCenterMobile = ((dropdownWrapperBounding.height * 2.75 - window.scrollY) + (window.screen.height / 100 * .5) - 90);
+  if (mobileDevice === false) {
+  window.scrollBy({top: dropdownWrapperCenter, left: 0, behavior: 'smooth'});
+  } else {
+  window.scrollBy({top: dropdownWrapperCenterMobile, left: 0, behavior: 'smooth'});
+  }
 };
 
 // getting drop down co-orderinates
@@ -553,7 +569,7 @@ let closeJavaScript = () => {
 document.getElementById("arrow-container3").onclick = scrollDown3 = () => {
 let footerWrapper = document.querySelector('.footer-container');
 let footerWrapperBounding = footerWrapper.getBoundingClientRect();
-let footerWrapperCenter = ((footerWrapperBounding.height * 3 - window.scrollY) + 1);
+let footerWrapperCenter = ((footerWrapperBounding.height * 4 - window.scrollY) + 1);
 
 window.scrollBy({top: footerWrapperCenter, left: 0, behavior: 'smooth'});
 
@@ -562,7 +578,7 @@ window.scrollBy({top: footerWrapperCenter, left: 0, behavior: 'smooth'});
 document.getElementById("contactMe-link").onclick = scrollDown3 = () => {
 let footerWrapper = document.querySelector('.footer-container');
 let footerWrapperBounding = footerWrapper.getBoundingClientRect();
-let footerWrapperCenter = ((footerWrapperBounding.height * 3 - window.scrollY) + 1);
+let footerWrapperCenter = ((footerWrapperBounding.height * 4 - window.scrollY) + 1);
 
 window.scrollBy({top: footerWrapperCenter, left: 0, behavior: 'smooth'});
 

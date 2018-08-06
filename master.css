@@ -159,6 +159,7 @@ body {
   color: black;
   text-transform: uppercase;
   cursor: pointer;
+  user-select: none;
 }
 .main-nav ul a:hover {
   text-decoration: underline;
@@ -452,7 +453,7 @@ body {
   padding-bottom: 20px;
 }
 .additional-skills-Container li {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 2rem;
 }
 
@@ -668,7 +669,6 @@ body {
 .dropdown-left-container {
   position: relative;
   max-width: 400px;
-  left: 5vh;
 }
 .dropdown-left-container h1 {
   padding-top: 10px;
@@ -885,5 +885,48 @@ body {
   #arrow-container2 {
     display: none;
   }
+
+  /* Skills Section */
+
+  #arrow-container3 {
+    display: none;
+  }
+  #htmlButton {
+    font-size: 2em;
+  }
+  #cssButton {
+    font-size: 2em;
+  }
+  #javaScriptButton {
+    font-size: 2em;
+  }
+  .dropdown-main-container {
+    height: 600px;
+    max-width: ;
+    width: auto;
+    margin: 0 auto;
+  }
+  .dropdown-left-container {
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+  }
+  .dropdown-left-container h1 {
+    font-size: 4em;
+    z-index: 100;
+  }
+  .dropdown-left-container p {
+    font-size: 2.5em
+  }
+  .dropdown-main-container img {
+    display: none;
+  }
+  .Stuff-I-Learning-Container {
+    top: 150px;
+  }
+  .Stuff-I-Learning-Container-left h2 {
+    font-size: 2em;
+  }
+  /* footer */
 
 }
