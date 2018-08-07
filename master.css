@@ -143,6 +143,7 @@ body {
 }
 .main-nav ul li {
   padding: 20px 5px;
+  user-select: none;
 }
 .main-nav ul img {
   width: 40px;
@@ -176,7 +177,6 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 .color-wrap-default::after, .color-wrap-default::before {
   content: "";
@@ -277,8 +277,8 @@ body {
   font-family: helvetica;
   width: 750px;
   color: white;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: normal;
   line-height: 1.5;
 }
 #name {
@@ -772,7 +772,7 @@ body {
   line-height: 2;
 }
 .footer-container h1 {
-  font-size: 36px;
+  font-size: 2.5em;
   display: block;
   color: white;
   margin-bottom: 10px;
@@ -781,7 +781,7 @@ body {
   color: white;
 }
 .footer-container h2 {
-  font-size: 1rem;
+  font-size: 1em;
   color: #D7CDCC;
 }
 
@@ -885,20 +885,51 @@ body {
   #arrow-container2 {
     display: none;
   }
+  .intro {
+    display: inline-block;
+    margin-top: 20px;
+    min-width: 90vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    background: #1D1E2C;
+  }
+  .intro p {
+    padding: 10px;
+    margin: 20px auto;
+    border: 3px solid white;
+    border-radius: 20px;
+    text-align: center;
+    font-family: helvetica;
+    width: 90vw;
+    color: white;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5;
+  }
 
   /* Skills Section */
 
   #arrow-container3 {
     display: none;
   }
+  #htmlButtonContainer {
+    padding: 20px;
+  }
   #htmlButton {
-    font-size: 2em;
+    font-size: 3em;
+  }
+  #cssButtonContainer {
+    padding: 20px;
   }
   #cssButton {
-    font-size: 2em;
+    font-size: 3em;
+  }
+  #javaScriptButtonContainer {
+    padding: 20px;
   }
   #javaScriptButton {
-    font-size: 2em;
+    font-size: 3em;
   }
   .dropdown-main-container {
     height: 600px;
@@ -909,6 +940,7 @@ body {
   .dropdown-left-container {
     margin: 0 auto;
     position: relative;
+    max-width: 70vw;
     top: 50px;
   }
   .dropdown-left-container h1 {
@@ -925,8 +957,33 @@ body {
     top: 150px;
   }
   .Stuff-I-Learning-Container-left h2 {
-    font-size: 2em;
+    font-size: 2.5em;
+  }
+  #Stuff-I-Learning-Container-left-img-SASS {
+    width: 150px;
+    height: 150px;
+  }
+  #Stuff-I-Learning-Container-left-img-React {
+    width: 150px;
+    height: 150px;
+  }
+  #Stuff-I-Learning-Container-left-img-php {
+    width: 150px;
+    height: 150px;
+  }
+  #Stuff-I-Learning-Container-left-img-Bootstrap {
+    width: 150px;
+    height: 150px;
   }
   /* footer */
-
+  .footer-container ul {
+    padding: 5%;
+    border-radius: 20px;
+  }
+  .footer-container h1 {
+    font-size: 4em;
+  }
+  .footer-container h2 {
+    font-size: 2em;
+  }
 }

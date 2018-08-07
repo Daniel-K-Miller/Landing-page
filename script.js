@@ -36,8 +36,8 @@ setTimeout(function(){
 document.getElementById("arrow-container").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
-let colorWrapperCenter = ((colorWrapperBounding.height - window.scrollY) + 1);
-let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) + (window.screen.height / 100 * .5) - 90);
+let colorWrapperCenter = ((colorWrapperBounding.height - window.scrollY) - window.screen.height / 100 * 3);
+let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) + (window.screen.height / 100 * .5) - 110);
   if (mobileDevice === false) {
   window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
   } else {
