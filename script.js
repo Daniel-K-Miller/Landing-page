@@ -49,7 +49,7 @@ let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) +
 document.getElementById("intro-link").onclick = scrollDown = () => {
 let colorWrapper = document.querySelector('.color-wrap-default');
 let colorWrapperBounding = colorWrapper.getBoundingClientRect();
-let colorWrapperCenter = ((colorWrapperBounding.height) - window.scrollY) + 1;
+let colorWrapperCenter = ((colorWrapperBounding.height - window.scrollY) - window.screen.height / 100 * 3);
 let colorWrapperCenterMobile = ((colorWrapperBounding.height - window.scrollY) + (window.screen.height / 100 * .5) - 90);
   if (mobileDevice === false) {
   window.scrollBy({top: colorWrapperCenter, left: 0, behavior: 'smooth'});
