@@ -7,7 +7,7 @@ This was my first landing page design practising my newly learnt HTML, CSS, and 
 
 ![alt text](https://github.com/Daniel-K-Miller/landing-page/blob/master/preview.png)
 
-https://daniel-k-miller.github.io/Landing-page/
+https://daniel-k-miller.github.io/landing-page/
 
 ### `Getting Started`
 
